@@ -148,7 +148,7 @@ EverMemModel sets a new state of the art on generative retrieval. The best resul
       <td align="left">Qwen3-Embedding-4B (Zhang et al., 2025)</td>
       <td align="center">62.6</td>
       <td align="center">89.2</td>
-      <td align="center"><u>62.6</u></td>
+      <td align="center"><span style="text-decoration: underline;">62.6</span></td>
       <td align="center"><strong>86.7</strong></td>
     </tr>
     <tr>
