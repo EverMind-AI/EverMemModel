@@ -45,7 +45,7 @@ The core of EverMemModel is the DSA mechanism, which replaces standard self-atte
 ### Retrieval Performance (NQ320k)
 
 EverMemModel sets a new state of the art on generative retrieval. The best result is in **bold**, second-best is <u>underlined</u>, and third-best is in *italics*.
-
+<--!
 | Method | NQ320K (Full text) | | NQ320K (Unseen) | |
 | :--- | :---: | :---: | :---: | :---: |
 | | **R@1** | **R@10** | **R@1** | **R@10** |
@@ -66,7 +66,7 @@ EverMemModel sets a new state of the art on generative retrieval. The best resul
 | GenRet (Sun et al., 2023) | 68.1 | 88.8 | *62.5* | <u>83.6</u> |
 | Self Retrieval (Tang et al., 2024) | <u>73.3</u> | <u>92.6</u> | - | - |
 | **Ours (EverMemModel)** | **75.5** | *90.6* | **66.5** | *83.5* |
-
+-->
 <table>
   <thead>
     <tr>
@@ -196,7 +196,7 @@ EverMemModel sets a new state of the art on generative retrieval. The best resul
 ### Question Answering Performance (MS MARCO)
 
 EverMemModel significantly outperforms both strong RAG baselines and large-context models.
-
+<--!
 | Dataset | Docs | Qwen3RAG-QA | | | Gemini-2.5-Flash | EverMemModel (Ours) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | | | **R@1** | **R@5** | **R@10** | | |
@@ -204,7 +204,45 @@ EverMemModel significantly outperforms both strong RAG baselines and large-conte
 | MS MARCO (7.1M Tokens) | 75,574| 2.225 | 2.521 | 2.759 | N/A† | **2.774** |
 
 † *Input exceeds the model's maximum context length.*
+-->
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2" align="left">Dataset</th>
+      <th rowspan="2" align="center">Docs</th>
+      <th colspan="3" align="center">Qwen3RAG-QA</th>
+      <th rowspan="2" align="center">Gemini-2.5-Flash</th>
+      <th rowspan="2" align="center">EverMemModel (Ours)</th>
+    </tr>
+    <tr>
+      <th align="center"><strong>R@1</strong></th>
+      <th align="center"><strong>R@5</strong></th>
+      <th align="center"><strong>R@10</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">MS MARCO (0.8M Tokens)</td>
+      <td align="center">8,389</td>
+      <td align="center">2.235</td>
+      <td align="center">2.535</td>
+      <td align="center">2.548</td>
+      <td align="center">2.710</td>
+      <td align="center"><strong>3.812</strong></td>
+    </tr>
+    <tr>
+      <td align="left">MS MARCO (7.1M Tokens)</td>
+      <td align="center">75,574</td>
+      <td align="center">2.225</td>
+      <td align="center">2.521</td>
+      <td align="center">2.759</td>
+      <td align="center">N/A†</td>
+      <td align="center"><strong>2.774</strong></td>
+    </tr>
+  </tbody>
+</table>
 
+† <em>Input exceeds the model's maximum context length.</em>
 <!--
 Notably, EverMemModel achieves this with an average adaptive recall of just **2.5 documents**, showcasing its superior efficiency and precision compared to fixed-size RAG retrieval.
 
