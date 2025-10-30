@@ -44,8 +44,8 @@ The core of EverMemModel is the DSA mechanism, which replaces standard self-atte
 
 ### Retrieval Performance (NQ320k)
 
-EverMemModel sets a new state of the art on generative retrieval. The best result is in **bold**, second-best is <u>underlined</u>, and third-best is in *italics*.
-<--!
+EverMemModel sets a new state of the art on generative retrieval. The best result is in **bold**, second-best is in *italics*, and third-best is <u>underlined</u>.
+<!--
 | Method | NQ320K (Full text) | | NQ320K (Unseen) | |
 | :--- | :---: | :---: | :---: | :---: |
 | | **R@1** | **R@10** | **R@1** | **R@10** |
@@ -196,7 +196,8 @@ EverMemModel sets a new state of the art on generative retrieval. The best resul
 ### Question Answering Performance (MS MARCO)
 
 EverMemModel significantly outperforms both strong RAG baselines and large-context models.
-<--!
+<!--
+
 | Dataset | Docs | Qwen3RAG-QA | | | Gemini-2.5-Flash | EverMemModel (Ours) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | | | **R@1** | **R@5** | **R@10** | | |
@@ -204,6 +205,7 @@ EverMemModel significantly outperforms both strong RAG baselines and large-conte
 | MS MARCO (7.1M Tokens) | 75,574| 2.225 | 2.521 | 2.759 | N/A† | **2.774** |
 
 † *Input exceeds the model's maximum context length.*
+
 -->
 <table>
   <thead>
