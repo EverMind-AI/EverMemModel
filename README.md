@@ -51,7 +51,7 @@ EverMemModel sets a new state of the art on retrieval task. The best result is i
 | | **R@1** | **R@1** |
 | **_Sparse retrieval_** | | |
 | BM25 (Robertson & Zaragoza, 2009b) | 29.7 | 32.3 |
-| DocT5Query (Cheriton, 2019) | 38.0 | 48.5 |
+| DocT5Query (Nogueira et al., 2019) | 38.0 | 48.5 |
 | **_Dense retrieval_** | | |
 | DPR (Karpukhin et al., 2020b) | 50.2 | 50.0 |
 | ANCE (Xiong et al., 2021) | 50.2 | 52.0 |
