@@ -88,7 +88,7 @@ EverMemModel sets a new state of the art on retrieval task. The best result is i
 | GenRet (Sun et al., 2023) | 68.1 | 88.8 | *62.5* | 83.6 |
 | Self Retrieval (Tang et al., 2024) | 73.3 | 92.6 | - | - |
 | **Ours (EverMemModel)** | **75.5** | *90.6* | **66.5** | *83.5* |
--->
+
 <table>
   <thead>
     <tr>
@@ -213,7 +213,7 @@ EverMemModel sets a new state of the art on retrieval task. The best result is i
     </tr>
   </tbody>
 </table>
-
+-->
 
 ### Question Answering Performance (MS MARCO)
 
