@@ -78,7 +78,7 @@ EverMemModel significantly outperforms both strong RAG baselines and large-conte
 † *Input exceeds the model's maximum context length.*
 
 Notably, EverMemModel achieves this with an average adaptive recall of just **2.5 documents**, showcasing its superior efficiency and precision compared to fixed-size RAG retrieval.
-
+<!--
 ## 🛠️ Setup & Installation
 
 1.  Clone the repository:
@@ -105,3 +105,4 @@ python train.py \
     --dataset_name ms_marco \
     --stage normal_sample_finetuning \
     --output_dir ./checkpoints/longmem_msmarco_stage2
+-->
