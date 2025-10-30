@@ -67,6 +67,27 @@ EverMemModel sets a new state of the art on generative retrieval. The best resul
 | Self Retrieval (Tang et al., 2024) | <u>73.3</u> | <u>92.6</u> | - | - |
 | **Ours (EverMemModel)** | **75.5** | *90.6* | **66.5** | *83.5* |
 
+Method,NQ320K (Full text),,NQ320K (Unseen),
+,R@1,R@10,R@1,R@10
+:---,:---:,:---:,:---:,:---:
+Sparse retrieval,,,,
+"BM25 (Robertson & Zaragoza, 2009b)",29.7,60.3,32.3,61.9
+"DocT5Query (Cheriton, 2019)",38.0,69.3,48.5,72.9
+Dense retrieval,,,,
+"DPR (Karpukhin et al., 2020b)",50.2,77.7,50.0,74.2
+"ANCE (Xiong et al., 2021)",50.2,78.5,52.0,75.9
+"GTR-Base (Ni et al., 2021)",56.0,84.4,61.9,83.2
+"Sentence-T5 (Ni et al., 2022)",53.6,83.0,56.5,79.5
+"HCE-J (Chen et al., 2025)",71.2,93.9,-,-
+"Qwen3-Embedding-0.6B (Zhang et al., 2025)",54.0,82.6,54.8,80.8
+"Qwen3-Embedding-4B (Zhang et al., 2025)",62.6,89.2,<u>62.6</u>,86.7
+Generative retrieval,,,,
+"DSI-QG (Zhuang et al., 2022)",63.1,80.7,45.9,65.8
+"NCI (Wang et al., 2022)",66.4,85.7,54.5,75.9
+"GenRet (Sun et al., 2023)",68.1,88.8,62.5,<u>83.6</u>
+"Self Retrieval (Tang et al., 2024)",<u>73.3</u>,<u>92.6</u>,-,-
+Ours (EverMemModel),75.5,90.6,66.5,83.5
+
 ### Question Answering Performance (MS MARCO)
 
 EverMemModel significantly outperforms both strong RAG baselines and large-context models.
