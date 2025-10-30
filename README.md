@@ -26,7 +26,7 @@ The core of EverMemModel is the DSA mechanism, which replaces standard self-atte
   <img src="https://github.com/user-attachments/files/23229685/dsa3.drawio.pdf" width="800">
 </p>
 <p align="center">
-  <em><b>Figure 1</b>: The Dual-Stream Sparse Attention (DSA) mechanism. The Memory Stream processes all documents in parallel. The Generation Stream's router selects relevant documents (e.g., Doc 2 & 4), and their compressed representations are concatenated with the question to generate the final answer.</em>
+  <b>Figure 1</b>: The Dual-Stream Sparse Attention (DSA) mechanism. The Memory Stream processes all documents in parallel. The Generation Stream's router selects relevant documents (e.g., Doc 2 & 4), and their compressed representations are concatenated with the question to generate the final answer.
 </p>
 
 1.  **Memory Stream**: Processes each document independently using standard intra-document self-attention. This preserves the internal semantic structure of each document.
@@ -37,14 +37,14 @@ The core of EverMemModel is the DSA mechanism, which replaces standard self-atte
   <img src="https://github.com/user-attachments/files/23229609/DSA_router_2.drawio.pdf" width="700">
 </p>
 <p align="center">
-  <em><b>Figure 2</b>: The architecture of the router. It chunks and pools document representations, calculates relevance scores against the question, selects the top-k documents, and concatenates their compressed representations to form the final context.</em>
+  <b>Figure 2</b>: The architecture of the router. It chunks and pools document representations, calculates relevance scores against the question, selects the top-k documents, and concatenates their compressed representations to form the final context.
 </p>
 
 ## 🚀 Results
 
 ### Retrieval Performance (NQ320k)
 
-EverMemModel sets a new state of the art on generative retrieval. The best result is in **bold**, second-best is in *italics*, and third-best is <u>underlined</u>.
+EverMemModel sets a new state of the art on generative retrieval. The best result is in **bold**.
 <!--
 | Method | NQ320K (Full text) | | NQ320K (Unseen) | |
 | :--- | :---: | :---: | :---: | :---: |
@@ -59,12 +59,12 @@ EverMemModel sets a new state of the art on generative retrieval. The best resul
 | Sentence-T5 (Ni et al., 2022) | 53.6 | 83.0 | 56.5 | 79.5 |
 | HCE-J (Chen et al., 2025) | *71.2* | **93.9** | - | - |
 | Qwen3-Embedding-0.6B (Zhang et al., 2025) | 54.0 | 82.6 | 54.8 | 80.8 |
-| Qwen3-Embedding-4B (Zhang et al., 2025) | 62.6 | 89.2 | <u>62.6</u> | **86.7** |
+| Qwen3-Embedding-4B (Zhang et al., 2025) | 62.6 | 89.2 | 62.6 | **86.7** |
 | **_Generative retrieval_** | | | | |
 | DSI-QG (Zhuang et al., 2022) | 63.1 | 80.7 | 45.9 | 65.8 |
 | NCI (Wang et al., 2022) | 66.4 | 85.7 | 54.5 | 75.9 |
-| GenRet (Sun et al., 2023) | 68.1 | 88.8 | *62.5* | <u>83.6</u> |
-| Self Retrieval (Tang et al., 2024) | <u>73.3</u> | <u>92.6</u> | - | - |
+| GenRet (Sun et al., 2023) | 68.1 | 88.8 | *62.5* | 83.6 |
+| Self Retrieval (Tang et al., 2024) | 73.3 | 92.6 | - | - |
 | **Ours (EverMemModel)** | **75.5** | *90.6* | **66.5** | *83.5* |
 -->
 <table>
@@ -83,7 +83,7 @@ EverMemModel sets a new state of the art on generative retrieval. The best resul
   </thead>
   <tbody>
     <tr>
-      <td colspan="5"><strong><em>Sparse retrieval</em></strong></td>
+      <td colspan="5"><strong>Sparse retrieval</strong></td>
     </tr>
     <tr>
       <td align="left">BM25 (Robertson & Zaragoza, 2009b)</td>
@@ -100,7 +100,7 @@ EverMemModel sets a new state of the art on generative retrieval. The best resul
       <td align="center">72.9</td>
     </tr>
     <tr>
-      <td colspan="5"><strong><em>Dense retrieval</em></strong></td>
+      <td colspan="5"><strong>Dense retrieval</strong></td>
     </tr>
     <tr>
       <td align="left">DPR (Karpukhin et al., 2020b)</td>
@@ -132,7 +132,7 @@ EverMemModel sets a new state of the art on generative retrieval. The best resul
     </tr>
     <tr>
       <td align="left">HCE-J (Chen et al., 2025)</td>
-      <td align="center"><em>71.2</em></td>
+      <td align="center">71.2</td>
       <td align="center"><strong>93.9</strong></td>
       <td align="center">-</td>
       <td align="center">-</td>
@@ -148,11 +148,11 @@ EverMemModel sets a new state of the art on generative retrieval. The best resul
       <td align="left">Qwen3-Embedding-4B (Zhang et al., 2025)</td>
       <td align="center">62.6</td>
       <td align="center">89.2</td>
-      <td align="center"><span style="text-decoration: underline;">62.6</span></td>
+      <td align="center">62.6</td>
       <td align="center"><strong>86.7</strong></td>
     </tr>
     <tr>
-      <td colspan="5"><strong><em>Generative retrieval</em></strong></td>
+      <td colspan="5"><strong>Generative retrieval</strong></td>
     </tr>
     <tr>
       <td align="left">DSI-QG (Zhuang et al., 2022)</td>
@@ -172,22 +172,22 @@ EverMemModel sets a new state of the art on generative retrieval. The best resul
       <td align="left">GenRet (Sun et al., 2023)</td>
       <td align="center">68.1</td>
       <td align="center">88.8</td>
-      <td align="center"><em>62.5</em></td>
-      <td align="center"><u>83.6</u></td>
+      <td align="center">62.5</td>
+      <td align="center">83.6</td>
     </tr>
     <tr>
       <td align="left">Self Retrieval (Tang et al., 2024)</td>
-      <td align="center"><u>73.3</u></td>
-      <td align="center"><u>92.6</u></td>
+      <td align="center">73.3</td>
+      <td align="center">92.6</td>
       <td align="center">-</td>
       <td align="center">-</td>
     </tr>
     <tr>
       <td align="left"><strong>Ours (EverMemModel)</strong></td>
       <td align="center"><strong>75.5</strong></td>
-      <td align="center"><em>90.6</em></td>
+      <td align="center">90.6</td>
       <td align="center"><strong>66.5</strong></td>
-      <td align="center"><em>83.5</em></td>
+      <td align="center">83.5</td>
     </tr>
   </tbody>
 </table>
@@ -244,7 +244,7 @@ EverMemModel significantly outperforms both strong RAG baselines and large-conte
   </tbody>
 </table>
 
-† <em>Input exceeds the model's maximum context length.</em>
+† Input exceeds the model's maximum context length.
 <!--
 Notably, EverMemModel achieves this with an average adaptive recall of just **2.5 documents**, showcasing its superior efficiency and precision compared to fixed-size RAG retrieval.
 
