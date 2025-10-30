@@ -20,10 +20,10 @@ Large Language Models (LLMs) struggle in knowledge-intensive domains that requir
 ## 🏗️ Architecture: Dual-Stream Sparse Attention (DSA)
 
 The core of EverMemModel is the DSA mechanism, which replaces standard self-attention with two specialized, parameter-sharing streams.
-[dsa3.drawio.pdf](https://github.com/user-attachments/files/23229685/dsa3.drawio.pdf)
+
 
 <p align="center">
-  <img src="https://i.imgur.com/w2t6X6S.png" width="800">
+  <img src="https://github.com/user-attachments/files/23229685/dsa3.drawio.pdf" width="800">
 </p>
 <p align="center">
   <em><b>Figure 1</b>: The Dual-Stream Sparse Attention (DSA) mechanism. The Memory Stream processes all documents in parallel. The Generation Stream's router selects relevant documents (e.g., Doc 2 & 4), and their compressed representations are concatenated with the question to generate the final answer.</em>
@@ -32,7 +32,6 @@ The core of EverMemModel is the DSA mechanism, which replaces standard self-atte
 1.  **Memory Stream**: Processes each document independently using standard intra-document self-attention. This preserves the internal semantic structure of each document.
 2.  **Generation Stream**: Performs dynamic retrieval and answer generation. Its router component is key to its efficiency.
 
-[DSA_router_2.drawio.pdf](https://github.com/user-attachments/files/23229609/DSA_router_2.drawio.pdf)
 
 <p align="center">
   <img src="https://github.com/user-attachments/files/23229609/DSA_router_2.drawio.pdf" width="700">
