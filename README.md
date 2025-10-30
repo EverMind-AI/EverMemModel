@@ -4,22 +4,22 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2510.XXXXX-b31b1b.svg)](https://arxiv.org/abs/2510.XXXXX)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This repository contains the official implementation for the paper: **LongMemModel: End-to-End Memory Model for Ultra-Long Contexts Question Answering with Dual-Stream Sparse Attention**.
+This repository contains the official implementation for the paper: **EverMemModel: End-to-End Memory Model for Ultra-Long Contexts Question Answering with Dual-Stream Sparse Attention**.
 
 ## 📝 Abstract
 
-Large Language Models (LLMs) struggle in knowledge-intensive domains that require deep, specialized knowledge. While Retrieval-Augmented Generation (RAG) is a common solution, its decoupled retrieve-then-read pipeline suffers from misaligned objectives and is prone to performance degradation from distractor documents. We propose **LongMemModel**, a unified, end-to-end trainable architecture that treats a massive document corpus as an extended context. The core of our model is the novel **Dual-Stream Sparse Attention (DSA)** mechanism, which efficiently processes the entire document set, identifies relevant information, and generates the final answer in a single, jointly-optimized process. Through a specialized three-stage training and inference procedure, LongMemModel can handle memory contexts on the scale of **100 million tokens**. Our model achieves state-of-the-art results on both retrieval (NQ320k) and question-answering (MS MARCO) benchmarks, significantly outperforming traditional RAG pipelines and powerful long-context models.
+Large Language Models (LLMs) struggle in knowledge-intensive domains that require deep, specialized knowledge. While Retrieval-Augmented Generation (RAG) is a common solution, its decoupled retrieve-then-read pipeline suffers from misaligned objectives and is prone to performance degradation from distractor documents. We propose **EverMemModel**, a unified, end-to-end trainable architecture that treats a massive document corpus as an extended context. The core of our model is the novel **Dual-Stream Sparse Attention (DSA)** mechanism, which efficiently processes the entire document set, identifies relevant information, and generates the final answer in a single, jointly-optimized process. Through a specialized three-stage training and inference procedure, EverMemModel can handle memory contexts on the scale of **100 million tokens**. Our model achieves state-of-the-art results on both retrieval (NQ320k) and question-answering (MS MARCO) benchmarks, significantly outperforming traditional RAG pipelines and powerful long-context models.
 
 ## ✨ Key Contributions
 
--   **End-to-End Memory Model**: We propose **LongMemModel**, a unified architecture that seamlessly integrates retrieval and generation, moving beyond the limitations of decoupled RAG systems.
+-   **End-to-End Memory Model**: We propose **EverMemModel**, a unified architecture that seamlessly integrates retrieval and generation, moving beyond the limitations of decoupled RAG systems.
 -   **Dual-Stream Sparse Attention (DSA)**: We design a novel and efficient attention mechanism that enables scalable processing of massive document corpora by separating intra-document processing (Memory Stream) from query-aware retrieval and generation (Generation Stream).
--   **State-of-the-Art Performance**: LongMemModel achieves SOTA performance on both the NQ320k retrieval benchmark and the MS MARCO question-answering task.
--   **Massive-Scale Context**: Thanks to its efficient architecture and a three-stage inference process, LongMemModel is one of the first models capable of handling contexts up to **100M tokens**.
+-   **State-of-the-Art Performance**: EverMemModel achieves SOTA performance on both the NQ320k retrieval benchmark and the MS MARCO question-answering task.
+-   **Massive-Scale Context**: Thanks to its efficient architecture and a three-stage inference process, EverMemModel is one of the first models capable of handling contexts up to **100M tokens**.
 
 ## 🏗️ Architecture: Dual-Stream Sparse Attention (DSA)
 
-The core of LongMemModel is the DSA mechanism, which replaces standard self-attention with two specialized, parameter-sharing streams.
+The core of EverMemModel is the DSA mechanism, which replaces standard self-attention with two specialized, parameter-sharing streams.
 
 <p align="center">
   <img src="https://i.imgur.com/w2t6X6S.png" width="800">
@@ -42,7 +42,7 @@ The core of LongMemModel is the DSA mechanism, which replaces standard self-atte
 
 ### Retrieval Performance (NQ320k)
 
-LongMemModel sets a new state of the art on generative retrieval. The best result is in **bold**, second-best is <u>underlined</u>, and third-best is in *italics*.
+EverMemModel sets a new state of the art on generative retrieval. The best result is in **bold**, second-best is <u>underlined</u>, and third-best is in *italics*.
 
 | Method | NQ320K (Full text) | | NQ320K (Unseen) | |
 | :--- | :---: | :---: | :---: | :---: |
@@ -63,13 +63,13 @@ LongMemModel sets a new state of the art on generative retrieval. The best resul
 | NCI (Wang et al., 2022) | 66.4 | 85.7 | 54.5 | 75.9 |
 | GenRet (Sun et al., 2023) | 68.1 | 88.8 | *62.5* | <u>83.6</u> |
 | Self Retrieval (Tang et al., 2024) | <u>73.3</u> | <u>92.6</u> | - | - |
-| **Ours (LongMemModel)** | **75.5** | *90.6* | **66.5** | *83.5* |
+| **Ours (EverMemModel)** | **75.5** | *90.6* | **66.5** | *83.5* |
 
 ### Question Answering Performance (MS MARCO)
 
-LongMemModel significantly outperforms both strong RAG baselines and large-context models.
+EverMemModel significantly outperforms both strong RAG baselines and large-context models.
 
-| Dataset | Docs | Qwen3RAG-QA | | | Gemini-2.5-Flash | LongMemModel (Ours) |
+| Dataset | Docs | Qwen3RAG-QA | | | Gemini-2.5-Flash | EverMemModel (Ours) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | | | **R@1** | **R@5** | **R@10** | | |
 | MS MARCO (0.8M Tokens) | 8,389 | 2.235 | 2.535 | 2.548 | 2.710 | **3.812** |
@@ -77,14 +77,14 @@ LongMemModel significantly outperforms both strong RAG baselines and large-conte
 
 † *Input exceeds the model's maximum context length.*
 
-Notably, LongMemModel achieves this with an average adaptive recall of just **2.5 documents**, showcasing its superior efficiency and precision compared to fixed-size RAG retrieval.
+Notably, EverMemModel achieves this with an average adaptive recall of just **2.5 documents**, showcasing its superior efficiency and precision compared to fixed-size RAG retrieval.
 
 ## 🛠️ Setup & Installation
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/your-username/LongMemModel.git](https://github.com/your-username/LongMemModel.git)
-    cd LongMemModel
+    git clone [https://github.com/your-username/EverMemModel.git](https://github.com/your-username/EverMemModel.git)
+    cd EverMemModel
     ```
 
 2.  Install dependencies:
