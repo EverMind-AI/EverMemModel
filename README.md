@@ -44,7 +44,29 @@ The core of EverMemModel is the DSA mechanism, which replaces standard self-atte
 
 ### Retrieval Performance (NQ320k)
 
-EverMemModel sets a new state of the art on generative retrieval. The best result is in **bold**.
+EverMemModel sets a new state of the art on retrieval task. The best result is in **bold**.
+
+| Method | NQ320K (Full text) | NQ320K (Unseen) |
+| :--- | :---: | :---: |
+| | **R@1** | **R@1** |
+| **_Sparse retrieval_** | | |
+| BM25 (Robertson & Zaragoza, 2009b) | 29.7 | 32.3 |
+| DocT5Query (Cheriton, 2019) | 38.0 | 48.5 |
+| **_Dense retrieval_** | | |
+| DPR (Karpukhin et al., 2020b) | 50.2 | 50.0 |
+| ANCE (Xiong et al., 2021) | 50.2 | 52.0 |
+| GTR-Base (Ni et al., 2021) | 56.0 | 61.9 |
+| Sentence-T5 (Ni et al., 2022) | 53.6 | 56.5 |
+| HCE-J (Chen et al., 2025) | 71.2 | - |
+| Qwen3-Embedding-0.6B (Zhang et al., 2025) | 54.0 | 54.8 |
+| Qwen3-Embedding-4B (Zhang et al., 2025) | 62.6 | 62.6 |
+| **_Generative retrieval_** | | |
+| DSI-QG (Zhuang et al., 2022) | 63.1 | 45.9 |
+| NCI (Wang et al., 2022) | 66.4 | 54.5 |
+| GenRet (Sun et al., 2023) | 68.1 | 62.5 |
+| Self Retrieval (Tang et al., 2024) | 73.3 | - |
+| **Ours (EverMemModel)** | **75.5** | **66.5** |
+
 <!--
 | Method | NQ320K (Full text) | | NQ320K (Unseen) | |
 | :--- | :---: | :---: | :---: | :---: |
