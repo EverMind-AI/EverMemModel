@@ -37,7 +37,7 @@ The core of EverMemModel is the DSA mechanism, which replaces standard self-atte
   <img src="assets/DSA_router.drawio.svg" width="700">
 </p>
 <p align="center">
-  <b>Figure 2</b>: The architecture of the router. It chunks and pools document representations, calculates relevance scores against the question, selects the top-k documents, and concatenates their compressed representations to form the final context.
+  <b>Figure 2</b>: The architecture of the router. It chunks and pools document representations, calculates relevance scores against the question, selects the top-k documents, and concatenates their compact representations to form the final context.
 </p>
 
 ## 🚀 Results
