@@ -23,7 +23,7 @@ The core of EverMemModel is the DSA mechanism, which replaces standard self-atte
 
 
 <p align="center">
-  <img src="assets/dsa3.drawio.pdf" width="800">
+  <img src="assets/DSA.drawio-2.svg" width="800">
 </p>
 <p align="center">
   <b>Figure 1</b>: The Dual-Stream Sparse Attention (DSA) mechanism. The Memory Stream processes all documents in parallel. The Generation Stream's router selects relevant documents (e.g., Doc 2 & 4), and their compressed representations are concatenated with the question to generate the final answer.
