@@ -13,7 +13,7 @@ Large Language Models (LLMs) struggle in knowledge-intensive domains that requir
 ## ✨ Key Contributions
 
 -   **End-to-End Memory Model**: We propose **EverMemModel**, a unified architecture that seamlessly integrates retrieval and generation, moving beyond the limitations of decoupled RAG systems.
--   **State-of-the-Art Performance**: EverMemModel achieves SOTA performance on both the NQ320k retrieval benchmark and the MS MARCO question-answering task.
+-   **State-of-the-Art Performance**: EverMemModel achieves SOTA performance on both the retrieval benchmark(NQ320k) and the question-answering task(MS MARCO and TriviaQA).
 -   **Massive-Scale Context**: Thanks to its efficient architecture, EverMemModel is one of the first models capable of handling contexts up to **100M tokens**.
 
 
@@ -46,7 +46,7 @@ EverMemModel sets a new state of the art on retrieval task. The best result is i
 | **Ours (EverMemModel)** | **75.5** | **66.5** |
 
 
-### Question Answering Performance (MS MARCO)
+### Question Answering Performance (MS MARCO and TriviaQA)
 
 EverMemModel significantly outperforms both strong RAG baselines and large-context models.
 <table>
@@ -75,7 +75,7 @@ EverMemModel significantly outperforms both strong RAG baselines and large-conte
       <td align="center"><strong>3.812</strong></td>
     </tr>
     <tr>
-      <td align="left">MS MARCO (7.1M Tokens)</td>
+      <td align="left">MS  (7.1M Tokens)</td>
       <td align="center">75,574</td>
       <td align="center">2.225</td>
       <td align="center">2.521</td>
