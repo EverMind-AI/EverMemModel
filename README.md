@@ -83,6 +83,24 @@ EverMemModel significantly outperforms both strong RAG baselines and large-conte
       <td align="center">N/A†</td>
       <td align="center"><strong>2.774</strong></td>
     </tr>
+    <tr>
+      <td align="left">TriviaQA (0.87M Tokens)</td>
+      <td align="center">607</td>
+      <td align="center">3.69</td>
+      <td align="center">4.10</td>
+      <td align="center">4.36</td>
+      <td align="center">3.29</td>
+      <td align="center"><strong>4.53</strong></td>
+    </tr>
+    <tr>
+      <td align="left">TriviaQA (8.71M Tokens)</td>
+      <td align="center">5,721</td>
+      <td align="center">3.27</td>
+      <td align="center">3.53</td>
+      <td align="center">3.86</td>
+      <td align="center">N/A†</td>
+      <td align="center"><strong>4.22</strong></td>
+    </tr>
   </tbody>
 </table>
 
