@@ -108,4 +108,4 @@ EverMemModel significantly outperforms both strong RAG baselines and large-conte
 
 ## 🌐 Our Homepage
 
-[**Click here to visit EverMind AI's official website**]([https://www.evermind-ai.com/lander](https://everm.ai))
+[**Click here to visit EverMind AI's official website**](https://everm.ai)
