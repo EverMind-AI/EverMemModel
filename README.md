@@ -105,6 +105,9 @@ EverMemModel significantly outperforms both strong RAG baselines and large-conte
 
 † Input exceeds the model's maximum context length.
 
+### Training Time
+![](training_time_vs_context_length_updated.png)
+
 ## 🌐 Our Homepage
 
 [**Click here to visit EverMind AI's official website**](https://everm.ai)
