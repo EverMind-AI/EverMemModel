@@ -16,8 +16,6 @@ Large Language Models (LLMs) struggle in knowledge-intensive domains that requir
 -   **State-of-the-Art Performance**: EverMemModel achieves SOTA performance on both the retrieval benchmark(NQ320k) and the question-answering task(MS MARCO and TriviaQA).
 -   **Massive-Scale Context**: Thanks to its efficient architecture, EverMemModel is one of the first models capable of handling contexts up to **100M tokens**.
 
-[Uploading triviaqa_judge_scores_4.pdf…]()
-
 
 ## 🚀 Results
 
